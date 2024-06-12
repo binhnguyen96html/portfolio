@@ -1,0 +1,24 @@
+[
+  {
+    "period": "Jan 2024 - May 2024",
+    "location": "New York, USA",
+    "company": "SvelteScope - Open-Source Chrome Extension Debugging Tool",
+    "description": "SvelteScope empowers developers to ship more confident Svelte code by pinpointing unexpected behaviors and experiment with components non-destructively — all within the browser!",
+    "jobTitle": "Software Engineer",
+    "responsibilities": [
+      "Leveraged Svelte's compilation-based approach to optimize JavaScript code and deliver smaller bundle sizes, contributing faster load times and smoother interactions, aligning with the application's goal of seamless and engaging experience for end-users",
+      "Integrated TypeScript's powerful type system, strict compiler rules, and advanced features to establish a highly expressive and flexible type ecosystem, improving code readability and maintainability, enhancing type safety, developer productivity, and long-term sustainability",
+      "Harnessed Chrome Extension API Runtime to inject custom scripts into the current Svelte application's context, providing a flexible and efficient approach without the need for server-side changes, allowing for quick iterations and continuous improvement of the application's interface",
+      "Applied Vis.js data visualization library to extensively customize node and edge properties to display hierarchical relationships, providing an intuitive interface by lowering the cognitive load for users exploring these intricate data structures, enhancing exploratory analysi",
+      "Implemented Jest's comprehensive testing suite, including its assertion library, mocking capabilities, and test runners, to enable thorough unit and integration testing, fostering a culture of collaboration and continuous integration, and ensuring a reliable and high-quality codebase"
+    ],
+    "link": "https://medium.com/@brandenbasche/sveltescope-your-new-svelte-debugging-companion-a0d807ffb3f3",
+    "skills": [
+      "Svelte",
+      "JavaScript/TypeScript",
+      "ChromeExtension_API",
+      "Vis.js",
+      "Jest"
+    ]
+  }
+]

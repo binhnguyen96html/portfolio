@@ -1,0 +1,58 @@
+[
+  {
+    "period": "2023",
+    "description": "HomeDecor - Web Application for selling furniture",
+    "link": "https://homedecorshop.onrender.com/",
+    "img": "img/home_decor.png",
+    "skills": [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ]
+  },
+  {
+    "period": "2023",
+    "description": "BookLover - Web Application for renting books",
+    "link": "https://book-rent-react.vercel.app/sign-in",
+    "img": "img/book_lover.png",
+    "skills": [
+      "React",
+      "Tailwind CSS",
+      "Firebase"
+    ]
+  },
+  {
+    "period": "2023",
+    "description": "Zillow Clone - Web Application for renting/selling houses/rooms",
+    "link": "https://zillow-clone-react.vercel.app/",
+    "img": "img/zillow_clone.png",
+    "skills": [
+      "React",
+      "Tailwind CSS",
+      "Firebase"
+    ]
+  },
+  {
+    "period": "2022",
+    "description": "Millionaire Game - Web Application for playing Millionaire games",
+    "link": "https://who-wants-to-be-a-millionaire-navy.vercel.app/index2.html",
+    "img": "img/millionaire.png",
+    "skills": [
+      "JavaScript",
+      "CSS"
+    ]
+  },
+  {
+    "period": "2022",
+    "description": "Spotify Clone - Web Application for music",
+    "link": "https://binhnguyen96html.github.io/spotify/",
+    "img": "img/spotify_clone.png",
+    "skills": [
+      "HTML",
+      "CSS"
+    ]
+  }
+]
