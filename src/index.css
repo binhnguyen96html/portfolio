@@ -16,3 +16,17 @@ p:hover .icon {
 div:hover p .icon {
   transform: translateX(2px) translateY(-2px); 
 }
+
+/* Custom scrollbar styles */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #073736; /* Change this to your desired color */
+  border-radius: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #11756c; /* Change this to your desired color */
+}

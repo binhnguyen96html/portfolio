@@ -11,13 +11,15 @@ const ProjectsPage = () => {
   return (
     <>
       <div
-        className="bg-gray-300 transition-colors duration-500
+        className="bg-gray-300 transition-colors duration-500 
+        overflow-y-auto max-h-screen scrollbar-thin
     bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 
-    text-white relative border p-24"
+    text-white relative px-12"
       >
         <div
-          className=" sticky top-20 left-2 text-4xl text-teal-200 flex justify-between gap-4 items-center
-        transition ease-in-out"
+          className=" sticky top-20 left-2 text-4xl text-teal-200 text-opacity-50
+           flex justify-between gap-4 items-center
+          transition ease-in-out"
         >
           {/* BACK  */}
           <div className="hover:text-teal-100 hover:scale-105">

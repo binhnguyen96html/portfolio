@@ -7,7 +7,8 @@ const ProjectsBig = ({ projects }) => {
       {projects.map((pro, idx) => (
         <div
           key={idx}
-          className="md-custom:grid grid-cols-4 mb-8 px-6 py-8 rounded-xl
+          className="md-custom:grid grid-cols-4 
+          mb-8 px-48 py-8 rounded-xl
       hover:bg-teal-900 hover:bg-opacity-50
       transition-all duration-300 group "
         >

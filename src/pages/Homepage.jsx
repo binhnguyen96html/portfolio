@@ -10,8 +10,7 @@ import projects from '../data/projects.json';
 // import { Element, Link } from 'react-scroll';
 // import {  Link } from 'react-router-dom';
 import { Element, Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink} from 'react-router-dom';
-
+import { Link as RouterLink } from 'react-router-dom';
 
 const Homepage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -81,18 +80,20 @@ const Homepage = () => {
       </div>
 
       <div
-        className="bg-gray-300 transition-colors duration-500
+        className="bg-gray-300 transition-colors duration-500 
         xl-custom:grid xl-custom:grid-cols-5
-      bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 
-      text-white "
+      bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white"
       >
         {/* LEFT DIV */}
         <div
-          className="xl-custom:col-span-2 
-          xl-custom:sticky top-0 h-screen overflow-y-auto
-          grid grid-rows-4"
+          className="xl-custom:col-span-2 overflow-y-auto scrollbar-thin
+          xl-custom:sticky top-0 h-screen "
         >
-          <div className="row-span-3 m-12 sm-custom:m-24">
+          <div
+            className="
+          lg-custom:mr-6 lg-custom:ml-24 lg-custom:mt-12 
+          sm-custom:m-24"
+          >
             <div>
               {/* <h2>Scroll Top: {scrollTop}</h2> */}
               <h1
@@ -174,8 +175,7 @@ const Homepage = () => {
 
           {/* ICONS  */}
           <div
-            className="row-span-1 m-12
-            sm-custom:m-24 text-4xl text-teal-200
+            className="sm-custom:m-24 text-4xl text-teal-200
           flex justify-start gap-4 items-center
           transition ease-in-out"
           >
@@ -211,11 +211,9 @@ const Homepage = () => {
 
         {/* RIGHT DIV */}
         <div
-          className="xl-custom:col-span-3 overflow-auto 
-        p-12
-        xl-custom:p-28
-        lg-custom:pt-0
-          sm-custom:px-28"
+          className="xl-custom:col-span-3 p-12
+        lg-custom:pt-0 lg-custom:m-12 
+        sm-custom:px-28"
         >
           {/* ABOUT  */}
           <Element name="about">
@@ -224,7 +222,7 @@ const Homepage = () => {
           sm-custom:text-justify
           text-base leading-[60px]
           xl-custom:text-xl xl-custom:leading-[60px]
-          lg-custom:text-2xl lg-custom:leading-[60px]"
+          lg-custom:text-2xl lg-custom:leading-[60px] "
             >
               <p>
                 At SvelteScope, our team is harnessing{' '}
@@ -282,15 +280,16 @@ const Homepage = () => {
           <Element name="projects">
             <Projects projects={projects} />
           </Element>
-    
-            <RouterLink to="/projects" className='flex justify-end'>
-              <div className='flex items-center gap-4 text-teal-200 hover:text-teal-400
-              duration-150 transition-colos'>
-                <p>Projects</p>
-                <FaArrowRight />
-              </div>
-            </RouterLink>
-     
+
+          <RouterLink to="/projects" className="flex justify-end">
+            <div
+              className="flex items-center gap-4 text-teal-200 hover:text-teal-400
+              duration-150 transition-colos"
+            >
+              <p>Projects</p>
+              <FaArrowRight />
+            </div>
+          </RouterLink>
         </div>
       </div>
     </div>
