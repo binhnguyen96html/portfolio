@@ -7,8 +7,11 @@ import Experience from '../components/Experience';
 import expList from '../data/experience.json';
 import Projects from '../components/Projects';
 import projects from '../data/projects.json';
-import { Element } from 'react-scroll';
-import {  Link } from 'react-router-dom';
+// import { Element, Link } from 'react-scroll';
+// import {  Link } from 'react-router-dom';
+import { Element, Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink} from 'react-router-dom';
+
 
 const Homepage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -137,9 +140,9 @@ const Homepage = () => {
                     'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
                   }`}
                 >
-                  <Link to="about" smooth={true} offset={-70}>
+                  <ScrollLink to="about" smooth={true} offset={-70}>
                     About
-                  </Link>
+                  </ScrollLink>
                 </span>
               </p>
               <p className="mt-6 hover:font-bold">
@@ -149,9 +152,9 @@ const Homepage = () => {
                     'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
                   }`}
                 >
-                  <Link to="experience" smooth={true} offset={-70}>
+                  <ScrollLink to="experience" smooth={true} offset={-70}>
                     Experience
-                  </Link>
+                  </ScrollLink>
                 </span>
               </p>
               <p className="mt-6 hover:font-bold">
@@ -161,9 +164,9 @@ const Homepage = () => {
                     'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
                   }`}
                 >
-                  <Link to="projects" smooth={true} offset={-70}>
+                  <ScrollLink to="projects" smooth={true} offset={-70}>
                     Projects
-                  </Link>
+                  </ScrollLink>
                 </span>
               </p>
             </div>
@@ -280,13 +283,13 @@ const Homepage = () => {
             <Projects projects={projects} />
           </Element>
     
-            <Link to="/projects" className='flex justify-end'>
+            <RouterLink to="/projects" className='flex justify-end'>
               <div className='flex items-center gap-4 text-teal-200 hover:text-teal-400
               duration-150 transition-colos'>
                 <p>Projects</p>
                 <FaArrowRight />
               </div>
-            </Link>
+            </RouterLink>
      
         </div>
       </div>
