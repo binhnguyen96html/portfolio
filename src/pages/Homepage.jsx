@@ -10,7 +10,7 @@ import projects from '../data/projects.json';
 // import { Element, Link } from 'react-scroll';
 // import {  Link } from 'react-router-dom';
 import { Element, Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Homepage = () => {
@@ -289,7 +289,7 @@ const Homepage = () => {
             <Projects projects={projects} />
           </Element>
 
-          <RouterLink to="/projects" className="flex justify-end">
+          <Link to="/projects" className="flex justify-end">
             <div
               className="flex items-center gap-4 text-teal-200
                hover:text-teal-400 hover:translate-x-4 group
@@ -298,7 +298,7 @@ const Homepage = () => {
               <p>Projects</p>
               <FaArrowRight className='group-hover:translate-x-1'/>
             </div>
-          </RouterLink>
+          </Link>
         </div>
       </div>
 

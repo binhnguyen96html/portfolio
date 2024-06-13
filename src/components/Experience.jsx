@@ -4,7 +4,7 @@ import { FiLink } from 'react-icons/fi';
 const Experience = ({ expList }) => {
   return (
     <div className="mt-24 iphone-promax:mt-12">
-      {expList.map((expItem, idx) => (
+      {expList && expList.map((expItem, idx) => (
         <div
           key={idx}
           className="md-custom:grid grid-cols-5 mb-8 px-6 py-8 rounded-xl
