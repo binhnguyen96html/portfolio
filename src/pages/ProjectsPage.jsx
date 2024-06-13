@@ -25,18 +25,13 @@ const ProjectsPage = () => {
         >
           {/* BACK  */}
           <div className="hover:text-teal-100 hover:scale-105">
-            <a
-              href="https://github.com/binhnguyen96html"
-              target="_blank"
-              rel="noreferrer"
-            >
+
              <Link to='/'> 
              <IoChevronBackCircleOutline 
              className='text-4xl
              xl-custom:text-5xl' />
              </Link>
 
-            </a>
           </div>
 
           {/* ICONS  */}
