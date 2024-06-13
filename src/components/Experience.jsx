@@ -3,11 +3,11 @@ import { FiLink } from 'react-icons/fi';
 
 const Experience = ({ expList }) => {
   return (
-    <div className="mt-24 iphone-promax:mt-12">
+    <div className="mt-24 iphone-promax:mt-12 ">
       {expList && expList.map((expItem, idx) => (
         <div
           key={idx}
-          className="md-custom:grid grid-cols-5 mb-8 px-6 py-8 rounded-xl
+          className="md-custom:grid grid-cols-5 p-12 rounded-xl shadow-md 
       hover:bg-teal-900 hover:bg-opacity-50
       transition-all duration-300 delay-75 group 
       lg-custom:text-xl
@@ -18,14 +18,14 @@ const Experience = ({ expList }) => {
             <p className='mt-2'>{expItem.location}</p>
           </div>
 
-          <div className="col-span-3 ml-0 
+          <div className="col-span-3 ml-0
           md-custom:ml-4 md-custom:mt-0
           sm-custom:mt-2
           iphone-promax:mt-4">
               <p className='text-xl font-bold'>{expItem.jobTitle}</p>
 
               <p
-                className="relative mt-4
+                className="relative mt-4 text-teal-400
               group-hover:text-cyan-200 duration-300"
               >
                 {expItem.company}

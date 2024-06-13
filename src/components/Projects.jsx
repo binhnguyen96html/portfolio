@@ -7,10 +7,11 @@ const Projects = ({ projects }) => {
       {projects.map((pro, idx) => (
         <div
           key={idx}
-          className=" md-custom:grid grid-cols-5 mb-8 px-6 py-8 rounded-xl
+          className=" md-custom:grid grid-cols-5 p-12 mb-6
+           rounded-xl shadow-md
       hover:bg-teal-900 hover:bg-opacity-50
       transition-all duration-300 group 
-      iphone-promax:bg-teal-900"
+      iphone-promax:bg-teal-900 "
         >
           <div className="col-span-2  sm-custom:pr-4">
             <img src={pro.img} className='group-hover:scale-105 rounded-lg' alt={pro.img}/>
@@ -19,7 +20,7 @@ const Projects = ({ projects }) => {
           <div className="col-span-3 mt-4
           md-custom:ml-4 md-custom:mt-0">
               <p
-                className="relative text-xl
+                className="relative text-xl text-teal-400
               group-hover:text-cyan-200 duration-300">
                 {pro.description}
                 <a

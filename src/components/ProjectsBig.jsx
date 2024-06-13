@@ -8,14 +8,14 @@ const ProjectsBig = ({ projects }) => {
         <div
           key={idx}
           className="xl-custom:grid grid-cols-4 
-          mb-8 px-48 py-8 rounded-xl
+          mx-12 mb-16 p-12 rounded-xl  shadow-xl
       hover:bg-teal-900 hover:bg-opacity-50
-      transition-all duration-300 group 
-      iphone-promax:px-3"
+      transition-all duration-300 group"
         >
-          <div className="col-span-2 p-8 sm-custom:pr-4
+          <div className="col-span-2
+          sm-custom:pr-4 
           iphone-promax:p-0">
-            <img src={pro.img} className='group-hover:scale-110 rounded-lg' alt={pro.img}/>
+            <img src={pro.img} className='group-hover:scale-105 rounded-lg' alt={pro.img}/>
           </div>
 
           <div className="col-span-2 mt-4 py-8 px-16
@@ -44,9 +44,9 @@ const ProjectsBig = ({ projects }) => {
                   <span
                     key={i}
                     className="bg-cyan-100 text-cyan-950 text-xl
-                    mr-2 rounded-xl py-2 px-4 mt-4 
-                    xl-custom:text-3xl
-                    iphone-promax:text-sm iphone-promax:p-2"
+                    mr-2 rounded-xl py-1 px-6 mt-4 
+                    xl-custom:text-2xl
+                    iphone-promax:text-sm"
                   >
                     {s}
                   </span>

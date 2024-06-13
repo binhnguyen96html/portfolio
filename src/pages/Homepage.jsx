@@ -10,7 +10,7 @@ import projects from '../data/projects.json';
 // import { Element, Link } from 'react-scroll';
 // import {  Link } from 'react-router-dom';
 import { Element, Link as ScrollLink } from 'react-scroll';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Homepage = () => {
@@ -203,8 +203,10 @@ const Homepage = () => {
                 <FaLinkedin />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl
-            iphone-promax:text-3xl">
+            <div
+              className="hover:text-teal-100 hover:scale-105 text-5xl
+            iphone-promax:text-3xl"
+            >
               <a
                 href="mailto:binhnguyenbiz96@gmail.com"
                 target="_blank"
@@ -219,7 +221,6 @@ const Homepage = () => {
         {/* RIGHT DIV */}
         <div
           className="xl-custom:col-span-3 p-12
-        lg-custom:pt-0 lg-custom:m-12 
         sm-custom:px-28"
         >
           {/* ABOUT  */}
@@ -266,22 +267,22 @@ const Homepage = () => {
           </Element>
 
           {/* Resume attached */}
-          <div className="mt-8">
-            <p
-              className="relative pl-6
-            hover:translate-x-4  hover:font-bold hover:text-sky-200
-            transition ease-in-out duration-150 delay-75 group"
+          <div
+            className="mt-8
+         hover:translate-x-4 hover:font-bold hover:text-sky-200
+         transition ease-in-out duration-150 delay-75 group"
+          >
+            <a
+              className="mt-1 ml-2 flex items-center gap-4"
+              target="_blank"
+              rel="noreferrer"
+              href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
             >
-              View Full Resume
-              <a
-                className="absolute mt-1 ml-2"
-                target="_blank"
-                rel="noreferrer"
-                href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
-              >
-                <FiLink className="text-base mt-1 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:font-bold" />
-              </a>
-            </p>
+              <span className="xl-custom:text-xl iphone-promax:text-sm ">
+                View Full Resume
+              </span>
+              <FiLink className="text-base mt-1 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:font-bold" />
+            </a>
           </div>
 
           {/* PROJECT  */}
@@ -296,7 +297,7 @@ const Homepage = () => {
               duration-150 delay-75 transition-colos"
             >
               <p>Projects</p>
-              <FaArrowRight className='group-hover:translate-x-1'/>
+              <FaArrowRight className="group-hover:translate-x-1" />
             </div>
           </Link>
         </div>

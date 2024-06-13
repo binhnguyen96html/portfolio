@@ -15,13 +15,12 @@ const ProjectsPage = () => {
         className="bg-gray-300 transition-colors duration-500 
         overflow-y-auto max-h-screen scrollbar-thin
     bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 
-    text-white relative
-    iphone-promax:px-12"
+    text-white relative"
       >
         <div
-          className=" sticky top-20 left-2 text-4xl text-teal-200 text-opacity-50
+          className=" sticky top-10 left-2 text-4xl text-teal-200 text-opacity-50 px-24
            flex justify-between gap-4 items-center
-          transition ease-in-out 
+          transition ease-in-out
           iphone-promax:text-2xl iphone-promax:my-6"
         >
           {/* BACK  */}
@@ -33,9 +32,8 @@ const ProjectsPage = () => {
             >
              <Link to='/'> 
              <IoChevronBackCircleOutline 
-             className='text-5xl i
-             xl-custom:text-5xl
-             phone-promax:text-2xl' />
+             className='text-4xl
+             xl-custom:text-5xl' />
              </Link>
 
             </a>
@@ -87,13 +85,12 @@ const ProjectsPage = () => {
         </div>
 
         {/* 1st DIV */}
-        <div className="mb-16">
+        <div className="">
           <div>
-            <h1 className="font-extrabold leading-[200px] 
-            xl-custom:text-8xl text-center 
-            iphone-promax:text-4xl iphone-promax:mt-24">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300
-              ">
+            <h1 className="font-extrabold text-4xl mt-16 mb-6 text-center
+            sm-custom:mb-16 sm-custom:mt-0
+            xl-custom:text-8xl">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300">
                 MY PROJECTS
               </span>
             </h1>
@@ -109,7 +106,9 @@ const ProjectsPage = () => {
        <ProjectsBig projects={projects} />
        </div>
 
+ 
        <Footer />
+
       </div>
     </>
   );
