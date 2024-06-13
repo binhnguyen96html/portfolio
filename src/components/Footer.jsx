@@ -6,13 +6,16 @@ import { MdOutlineEmail } from 'react-icons/md';
 const Footer = () => {
   return (
     <footer className="flex justify-between items-center
-    px-12 pb-6 
-    iphone-promax:pt-3">
+    border-t w-full
+    pb-6
+    xl-custom:p-12
+    iphone-promax:pt-3 iphone-promax:px-6 ">
      {/* ICONS  */}
      <div
        className="text-4xl text-teal-200
        flex justify-start gap-4 items-center
        transition ease-in-out
+       xl-custom:text-5xl
        iphone-promax:text-2xl"
      >
        <div className="hover:text-teal-100 hover:scale-105 ">
@@ -33,7 +36,9 @@ const Footer = () => {
            <FaLinkedin />
          </a>
        </div>
-       <div className="hover:text-teal-100 hover:scale-105 iphone-promax:text-3xl">
+       <div className="hover:text-teal-100 hover:scale-105 
+       xl-custom:text-6xl
+       iphone-promax:text-3xl">
          <a
            href="mailto:binhnguyenbiz96@gmail.com"
            target="_blank"
@@ -50,7 +55,8 @@ const Footer = () => {
            className="relative
          hover:translate-x-4  hover:font-bold hover:text-sky-200
          transition ease-in-out duration-150 delay-75 group
-         iphone-promax:text-base"
+         xl-custom:text-3xl
+         iphone-promax:text-sm "
          >
            View Full Resume
            <a

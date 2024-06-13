@@ -7,7 +7,7 @@ const ProjectsBig = ({ projects }) => {
       {projects.map((pro, idx) => (
         <div
           key={idx}
-          className="md-custom:grid grid-cols-4 
+          className="xl-custom:grid grid-cols-4 
           mb-8 px-48 py-8 rounded-xl
       hover:bg-teal-900 hover:bg-opacity-50
       transition-all duration-300 group 
@@ -24,6 +24,7 @@ const ProjectsBig = ({ projects }) => {
               <p
                 className="relative text-3xl  
               group-hover:text-cyan-200 duration-300
+              xl-custom:text-4xl
               iphone-promax:text-xl iphone-promax:mt-0">
                 {pro.description}
                 <a
@@ -44,6 +45,7 @@ const ProjectsBig = ({ projects }) => {
                     key={i}
                     className="bg-cyan-100 text-cyan-950 text-xl
                     mr-2 rounded-xl py-2 px-4 mt-4 
+                    xl-custom:text-3xl
                     iphone-promax:text-sm iphone-promax:p-2"
                   >
                     {s}
@@ -51,7 +53,9 @@ const ProjectsBig = ({ projects }) => {
                 ))}
               </div>
               
-              <p className='mt-4 opacity-70 text-xl iphone-promax:text-sm iphone-promax:ml-1'>{pro.period}</p>
+              <p className='mt-4 opacity-70 text-xl 
+              xl-custom:text-3xl
+              iphone-promax:text-sm iphone-promax:ml-1'>{pro.period}</p>
             </div>
           </div>
       ))}
