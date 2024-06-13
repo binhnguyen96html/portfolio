@@ -11,6 +11,7 @@ import projects from '../data/projects.json';
 // import {  Link } from 'react-router-dom';
 import { Element, Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Homepage = () => {
   // const [scrollTop, setScrollTop] = useState(0);
@@ -63,7 +64,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white">
       <div className="relative">
         <div
           className="absolute
@@ -82,23 +83,25 @@ const Homepage = () => {
       <div
         className="bg-gray-300 transition-colors duration-500 
         xl-custom:grid xl-custom:grid-cols-5
-      bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white"
+        bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white"
       >
         {/* LEFT DIV */}
         <div
           className="xl-custom:col-span-2 overflow-y-auto scrollbar-thin
-          xl-custom:sticky top-0 h-screen "
+          xl-custom:sticky top-0 h-screen
+          iphone-promax:h-full"
         >
           <div
             className="
           lg-custom:mr-6 lg-custom:ml-24 lg-custom:mt-12 
-          sm-custom:m-24"
+          sm-custom:m-24
+          iphone-promax:mx-12"
           >
             <div>
               {/* <h2>Scroll Top: {scrollTop}</h2> */}
               <h1
                 className="font-extrabold leading-[200px]
-              text-xl
+              text-4xl
               2xl-custom:text-9xl 
               xl-custom:text-8xl
               lg-custom:text-9xl
@@ -111,8 +114,9 @@ const Homepage = () => {
                 </span>
               </h1>
               <h6
-                className="sm-custom:mt-14 text-xl font-thin text-cyan-200
-              sm-custom:text-4xl"
+                className="text-xl font-thin text-cyan-200
+                sm-custom:mt-14 sm-custom:text-4xl
+                iphone-promax:mt-0"
               >
                 Frontend Developer
               </h6>
@@ -130,9 +134,9 @@ const Homepage = () => {
             {/* ABOUT EXPERIENCE PROJECTS  */}
             <div
               className="uppercase mt-16 transition ease-in-out delay-75 duration-300
-            font-extralight group
-            text-base
-            lg-custom:text-2xl"
+            font-extralight group text-base
+            lg-custom:text-2xl
+            iphone-promax:mt-0"
             >
               <p className="mt-6 hover:font-bold">
                 <span
@@ -175,9 +179,11 @@ const Homepage = () => {
 
           {/* ICONS  */}
           <div
-            className="sm-custom:m-24 text-4xl text-teal-200
+            className="text-4xl text-teal-200
           flex justify-start gap-4 items-center
-          transition ease-in-out"
+          transition ease-in-out
+          sm-custom:m-24
+          iphone-promax:text-2xl iphone-promax:mt-6 iphone-promax:mx-12"
           >
             <div className="hover:text-teal-100 hover:scale-105 ">
               <a
@@ -197,7 +203,8 @@ const Homepage = () => {
                 <FaLinkedin />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl">
+            <div className="hover:text-teal-100 hover:scale-105 text-5xl
+            iphone-promax:text-3xl">
               <a
                 href="mailto:binhnguyenbiz96@gmail.com"
                 target="_blank"
@@ -222,7 +229,8 @@ const Homepage = () => {
           sm-custom:text-justify
           text-base leading-[60px]
           xl-custom:text-xl xl-custom:leading-[60px]
-          lg-custom:text-2xl lg-custom:leading-[60px] "
+          lg-custom:text-2xl lg-custom:leading-[60px] 
+          iphone-promax:indent-0"
             >
               <p>
                 At SvelteScope, our team is harnessing{' '}
@@ -283,15 +291,18 @@ const Homepage = () => {
 
           <RouterLink to="/projects" className="flex justify-end">
             <div
-              className="flex items-center gap-4 text-teal-200 hover:text-teal-400
-              duration-150 transition-colos"
+              className="flex items-center gap-4 text-teal-200
+               hover:text-teal-400 hover:translate-x-4 group
+              duration-150 delay-75 transition-colos"
             >
               <p>Projects</p>
-              <FaArrowRight />
+              <FaArrowRight className='group-hover:translate-x-1'/>
             </div>
           </RouterLink>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

@@ -19,6 +19,7 @@ module.exports = {
         'lg-custom': '1000px',
         'md-custom': '600px',
         'sm-custom': '500px',
+        'iphone-promax': '400px'
       }
     },
   },

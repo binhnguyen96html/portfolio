@@ -10,17 +10,21 @@ const ProjectsBig = ({ projects }) => {
           className="md-custom:grid grid-cols-4 
           mb-8 px-48 py-8 rounded-xl
       hover:bg-teal-900 hover:bg-opacity-50
-      transition-all duration-300 group "
+      transition-all duration-300 group 
+      iphone-promax:px-3"
         >
-          <div className="col-span-2 p-8 sm-custom:pr-4">
+          <div className="col-span-2 p-8 sm-custom:pr-4
+          iphone-promax:p-0">
             <img src={pro.img} className='group-hover:scale-110 rounded-lg' alt={pro.img}/>
           </div>
 
           <div className="col-span-2 mt-4 py-8 px-16
-          md-custom:ml-4 md-custom:mt-0">
+          md-custom:ml-4 md-custom:mt-0
+          iphone-promax:mt-0 iphone-promax:p-3">
               <p
                 className="relative text-3xl  
-              group-hover:text-cyan-200 duration-300">
+              group-hover:text-cyan-200 duration-300
+              iphone-promax:text-xl iphone-promax:mt-0">
                 {pro.description}
                 <a
                   className="absolute ml-2 mt-1
@@ -39,14 +43,15 @@ const ProjectsBig = ({ projects }) => {
                   <span
                     key={i}
                     className="bg-cyan-100 text-cyan-950 text-xl
-                    mr-2 rounded-xl py-2 px-4 mt-4"
+                    mr-2 rounded-xl py-2 px-4 mt-4 
+                    iphone-promax:text-sm iphone-promax:p-2"
                   >
                     {s}
                   </span>
                 ))}
               </div>
               
-              <p className='mt-4 opacity-70 text-xl'>{pro.period}</p>
+              <p className='mt-4 opacity-70 text-xl iphone-promax:text-sm iphone-promax:ml-1'>{pro.period}</p>
             </div>
           </div>
       ))}

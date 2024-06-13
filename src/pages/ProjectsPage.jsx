@@ -19,7 +19,8 @@ const ProjectsPage = () => {
         <div
           className=" sticky top-20 left-2 text-4xl text-teal-200 text-opacity-50
            flex justify-between gap-4 items-center
-          transition ease-in-out"
+          transition ease-in-out 
+          iphone-promax:text-2xl iphone-promax:my-6"
         >
           {/* BACK  */}
           <div className="hover:text-teal-100 hover:scale-105">
@@ -29,14 +30,14 @@ const ProjectsPage = () => {
               rel="noreferrer"
             >
              <Link to='/'> 
-             <IoChevronBackCircleOutline className='text-5xl' />
+             <IoChevronBackCircleOutline className='text-5xl iphone-promax:text-2xl' />
              </Link>
 
             </a>
           </div>
 
           {/* ICONS  */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <div className="hover:text-teal-100 hover:scale-105 ">
               <a
                 href="https://github.com/binhnguyen96html"
@@ -55,7 +56,8 @@ const ProjectsPage = () => {
                 <FaLinkedin />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl">
+            <div className="hover:text-teal-100 hover:scale-105 text-5xl
+            iphone-promax:text-3xl">
               <a
                 href="mailto:binhnguyenbiz96@gmail.com"
                 target="_blank"
@@ -64,7 +66,8 @@ const ProjectsPage = () => {
                 <MdOutlineEmail />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl">
+            <div className="hover:text-teal-100 hover:scale-105 text-5xl
+            iphone-promax:text-3xl">
               <a
                 href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
                 target="_blank"
@@ -79,8 +82,10 @@ const ProjectsPage = () => {
         {/* 1st DIV */}
         <div className="mb-16">
           <div>
-            <h1 className="font-extrabold leading-[200px] text-8xl text-center">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300">
+            <h1 className="font-extrabold leading-[200px] text-8xl text-center 
+            iphone-promax:text-4xl iphone-promax:mt-24">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300
+              ">
                 MY PROJECTS
               </span>
             </h1>

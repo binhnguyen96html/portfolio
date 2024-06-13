@@ -3,13 +3,14 @@ import { FiLink } from 'react-icons/fi';
 
 const Projects = ({ projects }) => {
   return (
-    <div className="mt-24">
+    <div className="mt-24 iphone-promax:mt-12">
       {projects.map((pro, idx) => (
         <div
           key={idx}
           className=" md-custom:grid grid-cols-5 mb-8 px-6 py-8 rounded-xl
       hover:bg-teal-900 hover:bg-opacity-50
-      transition-all duration-300 group "
+      transition-all duration-300 group 
+      iphone-promax:bg-teal-900"
         >
           <div className="col-span-2  sm-custom:pr-4">
             <img src={pro.img} className='group-hover:scale-105 rounded-lg' alt={pro.img}/>

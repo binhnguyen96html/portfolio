@@ -3,14 +3,15 @@ import { FiLink } from 'react-icons/fi';
 
 const Experience = ({ expList }) => {
   return (
-    <div className="mt-24">
+    <div className="mt-24 iphone-promax:mt-12">
       {expList.map((expItem, idx) => (
         <div
           key={idx}
           className="md-custom:grid grid-cols-5 mb-8 px-6 py-8 rounded-xl
       hover:bg-teal-900 hover:bg-opacity-50
       transition-all duration-300 delay-75 group 
-      lg-custom:text-xl"
+      lg-custom:text-xl
+      iphone-promax:bg-teal-900"
         >
           <div className="col-span-2 opacity-70">
             <p>{expItem.period}</p>
@@ -19,7 +20,8 @@ const Experience = ({ expList }) => {
 
           <div className="col-span-3 ml-0 
           md-custom:ml-4 md-custom:mt-0
-          sm-custom:mt-2">
+          sm-custom:mt-2
+          iphone-promax:mt-4">
               <p className='text-xl font-bold'>{expItem.jobTitle}</p>
 
               <p
