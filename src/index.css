@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html {
-  scroll-behavior: smooth;
-} */
+
+html, body {
+  scrollbar-width: none;
+}
 
 .icon {
   transition: transform 0.3s ease-in-out;

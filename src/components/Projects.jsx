@@ -3,17 +3,15 @@ import { FiLink } from 'react-icons/fi';
 
 const Projects = ({ projects }) => {
   return (
-    <div className="mt-24 iphone-promax:mt-12">
+    <div className="mt-24 md:mt-12">
       {projects.map((pro, idx) => (
         <div
           key={idx}
-          className=" md-custom:grid grid-cols-5 p-12 mb-6
-           rounded-xl shadow-md
-      hover:bg-teal-900 hover:bg-opacity-50
-      transition-all duration-300 group 
-      iphone-promax:bg-teal-900 "
-        >
-          <div className="col-span-2  sm-custom:pr-4">
+          className="md:grid grid-cols-5 gap-4 p-12 mb-6 rounded-xl shadow-md
+        hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 group 
+        md:bg-teal-900 
+        md:mx-12 3xl:px-20">
+          <div className="col-span-2">
             <img
               src={pro.img}
               className="group-hover:scale-105 rounded-lg"
@@ -21,16 +19,15 @@ const Projects = ({ projects }) => {
             />
           </div>
 
-          <div
-            className="col-span-3 mt-4
-          md-custom:ml-4 md-custom:mt-0"
-          >
+          <div className="col-span-3 mt-4
+          md:mt-0 3xl:ml-6" >
             <div
-              className="relative text-xl text-teal-400
-              group-hover:text-cyan-200 duration-300"
+              className="relative text-base text-teal-400
+              group-hover:text-cyan-200 duration-300
+              md:text-xl 3xl:font-bold text-wrap"
             >
               <a href={pro.link} target="_blank" rel="noreferrer">
-                {pro.description} fgfdg
+                {pro.description}
               </a>
               <a
                 className="absolute ml-2 mt-1
@@ -47,7 +44,7 @@ const Projects = ({ projects }) => {
               {pro.skills.map((s, i) => (
                 <span
                   key={i}
-                  className="bg-cyan-100 text-cyan-950 text-sm
+                  className="bg-cyan-100 text-cyan-950 text-xs
                     mr-2 rounded-xl py-1 px-2 mt-1"
                 >
                   {s}

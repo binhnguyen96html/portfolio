@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { TiDocumentText } from 'react-icons/ti';
-import { MdOutlineEmail } from 'react-icons/md';
+import { FiMail } from 'react-icons/fi';
 import projects from '../data/projects.json';
 import ProjectsBig from '../components/ProjectsBig';
 import { Link } from 'react-router-dom';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import Footer from '../components/Footer';
+import { IoDocumentOutline } from "react-icons/io5";
 
 const ProjectsPage = () => {
   return (
@@ -18,25 +18,24 @@ const ProjectsPage = () => {
     text-white relative"
       >
         <div
-          className=" sticky top-10 text-teal-200 text-opacity-50 px-12
+          className=" sticky top-10 text-teal-200 text-opacity-50 px-12 
            flex justify-between items-center
           transition ease-in-out
           sm-custom:px-24
-          iphone-promax:text-2xl iphone-promax:my-6"
+          md:text-2xl md:my-6"
         >
           {/* BACK  */}
           <div className="hover:text-teal-100 hover:scale-105">
-
-             <Link to='/'> 
-             <IoChevronBackCircleOutline 
-             className='text-3xl
-             xl-custom:text-5xl' />
-             </Link>
-
+            <Link to="/">
+              <IoChevronBackCircleOutline
+                className="text-3xl
+             xl-custom:text-5xl"
+              />
+            </Link>
           </div>
 
           {/* ICONS  */}
-          <div className="flex items-center gap-4 xl-custom:text-5xl">
+          <div className="flex items-center gap-4 mobile:text-xl">
             <div className="hover:text-teal-100 hover:scale-105 ">
               <a
                 href="https://github.com/binhnguyen96html"
@@ -55,37 +54,40 @@ const ProjectsPage = () => {
                 <FaLinkedin />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl
-            xl-custom:text-6xl
-            iphone-promax:text-3xl">
+            <div
+              className="hover:text-teal-100 hover:scale-105
+            md:text-3xl"
+            >
               <a
                 href="mailto:binhnguyenbiz96@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                <MdOutlineEmail />
+                       <FiMail />
               </a>
             </div>
-            <div className="hover:text-teal-100 hover:scale-105 text-5xl
-            xl-custom:text-6xl
-            iphone-promax:text-3xl">
+            <div
+              className="hover:text-teal-100 hover:scale-105 
+            md:text-3xl"
+            >
               <a
                 href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
-                <TiDocumentText />
+              <IoDocumentOutline />
               </a>
             </div>
           </div>
         </div>
 
         {/* 1st DIV */}
-        <div className="">
+        <div>
           <div>
-            <h1 className="font-extrabold text-4xl mt-16 mb-6 text-center
-            sm-custom:mb-16 sm-custom:mt-0
-            xl-custom:text-8xl">
+            <h1
+              className="font-extrabold text-4xl mt-16 mb-6 text-center
+            lg:text-6xl"
+            >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300">
                 MY PROJECTS
               </span>
@@ -96,15 +98,11 @@ const ProjectsPage = () => {
         {/* 2nd DIV */}
 
         {/* PROJECT  */}
-       <div className='
-       sm-custom:px-48
-       iphone-promax:px-0'>
-       <ProjectsBig projects={projects} />
-       </div>
+        <div className="md:px-0 lg:mt-16">
+          <ProjectsBig projects={projects} />
+        </div>
 
- 
-       <Footer />
-
+        <Footer />
       </div>
     </>
   );

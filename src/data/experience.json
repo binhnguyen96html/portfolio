@@ -12,7 +12,8 @@
       "Applied Vis.js data visualization library to extensively customize node and edge properties to display hierarchical relationships, providing an intuitive interface by lowering the cognitive load for users exploring these intricate data structures, enhancing exploratory analysi",
       "Implemented Jest's comprehensive testing suite, including its assertion library, mocking capabilities, and test runners, to enable thorough unit and integration testing, fostering a culture of collaboration and continuous integration, and ensuring a reliable and high-quality codebase"
     ],
-    "link": "https://medium.com/@brandenbasche/sveltescope-your-new-svelte-debugging-companion-a0d807ffb3f3",
+    "link": "https://sveltescope.com/",
+    "social_media": "https://medium.com/@brandenbasche/sveltescope-your-new-svelte-debugging-companion-a0d807ffb3f3",
     "skills": [
       "Svelte",
       "JavaScript/TypeScript",
