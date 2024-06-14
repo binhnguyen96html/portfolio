@@ -7,14 +7,13 @@ import Experience from '../components/Experience';
 import expList from '../data/experience.json';
 import Projects from '../components/Projects';
 import projects from '../data/projects.json';
-// import { Element, Link } from 'react-scroll';
-// import {  Link } from 'react-router-dom';
 import { Element, Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Homepage = () => {
-  // const [scrollTop, setScrollTop] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
+  const [scrollX, setScrollX] = useState(0);
   const [bolded, setBolded] = useState({
     about: true,
     experience: false,
@@ -24,7 +23,8 @@ const Homepage = () => {
   //SCROLL
   useEffect(() => {
     const handleScroll = () => {
-      // setScrollTop(window.scrollY);
+      setScrollTop(window.scrollY);
+      setScrollX(window.scrollX);
 
       if (window.scrollY < 300) {
         setBolded({ about: true, experience: false, projects: false });
@@ -47,10 +47,16 @@ const Homepage = () => {
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
+      setMousePosition({ x: 0, y: 0 });
 
       if (window.scrollY < 200) {
-        setMousePosition({ x: event.clientX - 300, y: event.clientY - 300 });
+        setMousePosition({ x: event.clientX - 300, y: event.clientY - 200 });
+      } else if (window.scrollY < 400) {
+        setMousePosition({ x: event.clientX - 300, y: event.clientY + 100 });
+      } else if (window.scrollY < 800) {
+        setMousePosition({ x: event.clientX - 300, y: event.clientY + 300 });
+      } else if (window.scrollY < 1000) {
+        setMousePosition({ x: event.clientX - 300, y: event.clientY + 500 });
       } else {
         setMousePosition({ x: 0, y: 0 });
       }
@@ -64,21 +70,35 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className=" bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white">
-      <div className="relative">
+    <div
+      className="w-screen bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white  relattive
+    border-4 border-red-800 z-10"
+    >
+      <div className="relative bg-pink-300" style={{ width: '100%' }}>
         <div
-          className="absolute
-    transition-colors delay-100 duration-300
-    w-[900px] h-[900px] rounded-full"
+          className={`absolute transition-colors delay-100 duration-300 
+          ${window.innerWidth < 500 ? 'w-0 h-0' : 'w-[500px] h-[500px]'}`}
           style={{
             left: mousePosition.x,
             top: mousePosition.y,
             opacity: 0.05,
-            background:
-              'radial-gradient(circle,rgba(197,247,242,1) 5%,rgba(6,50,49,1)  50%)',
+            transition: 'background-color 0.3s, opacity 0.3s',
+            borderRadius: '100%',
+            background: `${
+              scrollTop < 200
+                ? 'radial-gradient(circle,rgba(197,247,242,1) 1%,rgba(6,50,49,1) 50%)'
+                : scrollTop < 400
+                ? 'radial-gradient(circle,rgba(197,247,242,1) 5%,rgba(6,50,49, 0.5) 50%)'
+                : 'radial-gradient(circle,rgba(197,247,242,1) 5%,rgba(6,50,49, 0.3) 50%)'
+            } `,
           }}
         />
       </div>
+
+      {/* check scroll Y  */}
+      <h2 className="sticky top-10">
+        Scroll Top: {scrollTop} - {scrollX} - {window.innerWidth}
+      </h2>
 
       <div
         className="bg-gray-300 transition-colors duration-500 
@@ -98,15 +118,13 @@ const Homepage = () => {
           iphone-promax:mx-12"
           >
             <div>
-              {/* <h2>Scroll Top: {scrollTop}</h2> */}
               <h1
                 className="font-extrabold leading-[200px]
-              text-4xl
+              text-5xl
               2xl-custom:text-9xl 
               xl-custom:text-8xl
               lg-custom:text-9xl
               md-custom:text-7xl
-              sm-custom:text-5xl
               "
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300">

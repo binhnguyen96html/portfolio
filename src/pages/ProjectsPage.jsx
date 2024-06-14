@@ -18,9 +18,10 @@ const ProjectsPage = () => {
     text-white relative"
       >
         <div
-          className=" sticky top-10 left-2 text-4xl text-teal-200 text-opacity-50 px-24
-           flex justify-between gap-4 items-center
+          className=" sticky top-10 text-teal-200 text-opacity-50 px-12
+           flex justify-between items-center
           transition ease-in-out
+          sm-custom:px-24
           iphone-promax:text-2xl iphone-promax:my-6"
         >
           {/* BACK  */}
@@ -28,7 +29,7 @@ const ProjectsPage = () => {
 
              <Link to='/'> 
              <IoChevronBackCircleOutline 
-             className='text-4xl
+             className='text-3xl
              xl-custom:text-5xl' />
              </Link>
 

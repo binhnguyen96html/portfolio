@@ -50,7 +50,7 @@ const Footer = () => {
 
       {/* Resume attached */}
          <div
-           className="mr-12 iphone-promax:mr-6
+           className="mr-12 iphone-promax:mr-0
          hover:translate-x-4 hover:font-bold hover:text-sky-200
          transition ease-in-out duration-150 delay-75 group"
          >
