@@ -9,8 +9,9 @@ const GroupIcons = () => {
       className="text-xl text-teal-200 flex justify-start gap-4 items-center
       transition ease-in-out 
       md:text-3xl 
-      3xl:text-4xl ">
-      <div className="hover:text-teal-100 hover:scale-105 ">
+      3xl:text-4xl 
+      dark:text-teal-700">
+      <div className="hover:text-teal-100 dark:hover:text-teal-500 hover:scale-105 ">
         <a
           href="https://github.com/binhnguyen96html"
           target="_blank"
@@ -20,7 +21,7 @@ const GroupIcons = () => {
         </a>
       </div>
 
-      <div className="hover:text-teal-100 hover:scale-105">
+      <div className="hover:text-teal-100 dark:hover:text-teal-500 hover:scale-105">
         <a
           href="https://www.linkedin.com/in/binh-nguyen-a07731101/"
           target="_blank"
@@ -30,7 +31,7 @@ const GroupIcons = () => {
         </a>
       </div>
 
-      <div className="hover:text-teal-100 hover:scale-105">
+      <div className="hover:text-teal-100 dark:hover:text-teal-500 hover:scale-105">
         <a
           href="mailto:binhnguyenbiz96@gmail.com"
           target="_blank"

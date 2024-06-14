@@ -9,8 +9,8 @@ const Projects = ({ projects }) => {
           key={idx}
           className="md:grid grid-cols-5 gap-4 p-12 mb-6 rounded-xl shadow-md
         hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 group 
-        md:bg-teal-900 
-        md:mx-12 3xl:px-20">
+        md:bg-teal-900 md:mx-12 3xl:px-20
+        dark:bg-teal-600">
           <div className="col-span-2">
             <img
               src={pro.img}
@@ -24,7 +24,8 @@ const Projects = ({ projects }) => {
             <div
               className="relative text-base text-teal-400
               group-hover:text-cyan-200 duration-300
-              md:text-xl 3xl:font-bold text-wrap"
+              md:text-xl 3xl:font-bold text-wrap
+              dark:text-teal-100 dark:group-hover:text-white"
             >
               <a href={pro.link} target="_blank" rel="noreferrer">
                 {pro.description}
@@ -45,14 +46,15 @@ const Projects = ({ projects }) => {
                 <span
                   key={i}
                   className="bg-cyan-100 text-cyan-950 text-xs
-                    mr-2 rounded-xl py-1 px-2 mt-1"
+                    mr-2 rounded-xl py-1 px-2 mt-1
+                    dark:bg-teal-100"
                 >
                   {s}
                 </span>
               ))}
             </div>
 
-            <p className="mt-4 opacity-70">{pro.period}</p>
+            <p className="mt-4 opacity-70 dark:text-zinc-50">{pro.period}</p>
           </div>
         </div>
       ))}

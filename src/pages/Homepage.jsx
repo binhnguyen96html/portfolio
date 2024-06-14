@@ -20,7 +20,8 @@ const Homepage = () => {
     experience: false,
     projects: false,
   });
-  console.log('scrollX', scrollX)
+  const [darkMode, setDarkMode] = useState(false);
+  console.log('scrollX', scrollX);
 
   //SCROLL
   useEffect(() => {
@@ -46,7 +47,6 @@ const Homepage = () => {
 
   //MOUSE MOVED
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
   useEffect(() => {
     const handleMouseMove = (event) => {
       setMousePosition({ x: 0, y: 0 });
@@ -71,11 +71,50 @@ const Homepage = () => {
     };
   }, []);
 
+  //DARK mode
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <div
-      className="bg-gradient-to-b from-teal-950 via-teal-900 to-teal-600 
-    text-sm text-white relative z-10 leading-10 "
+      className="text-sm text-white relative z-10 leading-10 
+      bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600
+      dark:text-black dark:bg-gradient-to-b dark:from-teal-100 dark:to-teal-300"
     >
+      {/* TOGGLE button  */}
+      <label
+        className="inline-flex items-center cursor-pointer z-20 
+      absolute right-6 top-5 lg:right-24"
+      >
+        <input
+          type="checkbox"
+          value=""
+          className="sr-only peer"
+          onChange={() => setDarkMode(!darkMode)}
+        />
+        <div
+          className="relative w-6 h-3 bg-teal-100 peer-focus:outline-none
+          rounded-full peer 
+        dark:bg-teal-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full 
+         after:content-[''] 
+          after:absolute after:top-[0px] after:start-[0px] 
+        after:bg-teal-800 after:border-none after:border after:rounded-full after:h-3 after:w-3 after:transition-all
+         dark:border-none peer-checked:bg-teal-600"
+        ></div>
+        <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+          {darkMode ? (
+            <span className="text-teal-800">Dark mode</span>
+          ) : (
+            <span className="text-teal-100">Light mode</span>
+          )}
+        </span>
+      </label>
+
       {/* Resume circle */}
       <ResumeCircle />
 
@@ -83,7 +122,7 @@ const Homepage = () => {
       <div className="relative z-10 overflow-x-clip">
         <div
           className={`absolute transition-colors delay-100 duration-300 
-          ${window.innerWidth < 500 ? 'w-0 h-0' : 'w-[500px] h-[500px]'}`}
+          ${window.innerWidth < 500 || darkMode ? 'w-0 h-0' : 'w-[500px] h-[500px]'}`}
           style={{
             left: mousePosition.x,
             top: mousePosition.y,
@@ -107,15 +146,17 @@ const Homepage = () => {
       </h2> */}
 
       <div
-        className="bg-gray-300 transition-colors duration-500 pt-6 px-12 
+        className="bg-gray-300 transition-colors duration-500 pt-12 px-12
         bg-gradient-to-b from-teal-950  via-teal-900  to-teal-600 text-white
-        lg:grid grid-cols-5 lg:relative"
+        lg:grid grid-cols-5 lg:relative
+        dark:text-black dark:bg-gradient-to-b dark:from-teal-100 dark:to-teal-300"
       >
         {/* LEFT DIV */}
         <div
           className="top-0 z-10
           lg:h-screen
-          lg:col-span-2 lg:sticky "
+          lg:col-span-2 lg:sticky 
+          "
         >
           <div
             className="
@@ -126,28 +167,31 @@ const Homepage = () => {
             <div>
               <h1
                 className="font-extrabold text-xl
-                mobile:text-4xl
+                mobile:text-6xl
                 md:text-7xl
                 lg:text-8xl lg:leading-[120px]
                 3xl:text-9xl 3xl:leading-[140px]"
               >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300">
+                <span
+                  className="bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300
+                dark:bg-gradient-to-r dark:from-teal-700  dark:via-teal-600  dark:to-teal-400"
+                >
                   Binh Nguyen
                 </span>
               </h1>
               <h6
-                className="text-md font-thin text-cyan-200 mt-3
-                md:text-4xl md:mt-6
-                lg:mt-12
-                3xl:mt-14 3xl:text-5xl"
+                className="text-xl font-thin text-cyan-200 mt-6
+                md:text-4xl lg:mt-12 3xl:mt-14 3xl:text-5xl
+                dark:text-teal-800"
               >
                 Frontend Developer
               </h6>
               <p
-                className="font-extralight mt-3 text-zinc-200
+                className="font-extralight mt-3 text-zinc-300
                 md:text-xl md:mt-6
                 lg:mt-12 lg:leading-10
-                3xl:mt-14 3xl:text-2xl 3xl:leading-[50px]"
+                3xl:mt-14 3xl:text-2xl 3xl:leading-[50px]
+                dark:text-zinc-600"
               >
                 I am proficient in JavaScript, and leading frontend frameworks,
                 allowing me to deliver robust, full-stack solutions.
@@ -155,7 +199,8 @@ const Homepage = () => {
             </div>
 
             {/* ABOUT // EXPERIENCE // PROJECTS  */}
-            <div className="uppercase transition-all ease-in-out cursor-pointer font-extralight group
+            <div
+              className="uppercase transition-all ease-in-out cursor-pointer font-extralight group mt-3
             md:text-xl md:leading-10 md:mt-6
             lg:leading-[50px] lg:mt-12
             3xl:text-2xl 3xl:leading-[60px]"
@@ -164,7 +209,7 @@ const Homepage = () => {
                 <span
                   className={`${
                     bolded.about &&
-                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
+                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300 dark:bg-gradient-to-r dark:from-zinc-500 dark:to-teal-400'
                   }`}
                 >
                   <ScrollLink to="about" smooth={true} offset={-70}>
@@ -176,7 +221,7 @@ const Homepage = () => {
                 <span
                   className={`${
                     bolded.experience &&
-                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
+                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300 dark:bg-gradient-to-r dark:from-zinc-500 dark:to-teal-400'
                   }`}
                 >
                   <ScrollLink to="experience" smooth={true} offset={-70}>
@@ -188,7 +233,7 @@ const Homepage = () => {
                 <span
                   className={`${
                     bolded.projects &&
-                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300'
+                    'font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-100 to-sky-300 dark:bg-gradient-to-r dark:from-zinc-500 dark:to-teal-400'
                   }`}
                 >
                   <ScrollLink to="projects" smooth={true} offset={-70}>
@@ -200,7 +245,7 @@ const Homepage = () => {
           </div>
 
           {/* ICONS  */}
-          <div className="mt-6 md:ml-12 md:mt-12 lg:mt-16 3xl:mt-20">
+          <div className="mt-12 md:ml-12 md:mt-12 lg:mt-16 3xl:mt-20">
             <GroupIcons />
           </div>
         </div>
@@ -208,7 +253,6 @@ const Homepage = () => {
         {/* RIGHT DIV */}
         <div
           className="z-10 mt-6
-          md
           lg:col-span-3 
           sm-custom:px-28"
         >
@@ -223,7 +267,7 @@ const Homepage = () => {
           </Element>
 
           {/* PROJECT  */}
-          <Element name="projects" >
+          <Element name="projects">
             <Projects projects={projects} />
           </Element>
 
@@ -233,7 +277,8 @@ const Homepage = () => {
               className="flex items-center gap-4 text-teal-200
                hover:text-teal-400 hover:translate-x-4 group
               duration-150 delay-75 transition-colos
-              md:ml-12"
+              md:ml-12 lg:mb-6
+              dark:text-teal-800"
             >
               <p>Projects</p>
               <FaArrowRight className="group-hover:translate-x-1" />

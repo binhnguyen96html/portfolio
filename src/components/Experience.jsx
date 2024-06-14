@@ -11,7 +11,8 @@ const Experience = ({ expList }) => {
             key={idx}
             className="md:grid grid-cols-5 px-12 py-6 rounded-xl shadow-xl
       hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 delay-75 group 
-      md:bg-teal-900 md:mx-12 3xl:px-20"
+      md:bg-teal-900 md:mx-12 3xl:px-20
+      dark:bg-teal-700 dark:text-white"
           >
             <div className="col-span-2 opacity-70 flex flex-col gap-2 text-base
             3xl:text-xl">
