@@ -34,15 +34,14 @@ const Experience = ({ expList }) => {
             </div>
 
             <div
-              className="col-span-3 ml-0
-              md:mt-0"
+              className="col-span-3 ml-0 mt-6 lg:mt-0"
             >
               <p className="text-xl font-bold 3xl:text-2xl">{expItem.jobTitle}</p>
 
               <p
-                className="relative mt-4 text-teal-400
+                className="relative mt-2 text-teal-400
               group-hover:text-cyan-200 duration-300
-              md:text-xl"
+               md:text-xl"
               >
                 <a href={expItem.link} target='_blank' rel='noreferrer' > {expItem.company}</a>
                 <a
@@ -54,7 +53,7 @@ const Experience = ({ expList }) => {
                 </a>
               </p>
 
-              <p className="mt-4 font-thin text-sm 3xl:text-md ">{expItem.description}</p>
+              <p className="mt-2 font-thin text-sm 3xl:text-md ">{expItem.description}</p>
 
               <div className="overflow-hidden flex flex-wrap mt-4 ">
                 {expItem.skills.map((s, i) => (
