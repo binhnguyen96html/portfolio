@@ -6,7 +6,7 @@ import ProjectsBig from '../components/ProjectsBig';
 import { Link } from 'react-router-dom';
 import { IoChevronBackCircleOutline } from 'react-icons/io5';
 import Footer from '../components/Footer';
-import { IoDocumentOutline } from "react-icons/io5";
+import { IoDocumentOutline } from 'react-icons/io5';
 
 const ProjectsPage = () => {
   return (
@@ -21,16 +21,12 @@ const ProjectsPage = () => {
           className=" sticky top-10 text-teal-200 text-opacity-50 px-12 
            flex justify-between items-center
           transition ease-in-out
-          sm-custom:px-24
           md:text-2xl md:my-6"
         >
           {/* BACK  */}
           <div className="hover:text-teal-100 hover:scale-105">
             <Link to="/">
-              <IoChevronBackCircleOutline
-                className="text-3xl
-             xl-custom:text-5xl"
-              />
+              <IoChevronBackCircleOutline className="text-3xl" />
             </Link>
           </div>
 
@@ -54,28 +50,22 @@ const ProjectsPage = () => {
                 <FaLinkedin />
               </a>
             </div>
-            <div
-              className="hover:text-teal-100 hover:scale-105
-            md:text-3xl"
-            >
+            <div className="hover:text-teal-100 hover:scale-105">
               <a
                 href="mailto:binhnguyenbiz96@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                       <FiMail />
+                <FiMail />
               </a>
             </div>
-            <div
-              className="hover:text-teal-100 hover:scale-105 
-            md:text-3xl"
-            >
+            <div className="hover:text-teal-100 hover:scale-105">
               <a
                 href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
-              <IoDocumentOutline />
+                <IoDocumentOutline />
               </a>
             </div>
           </div>

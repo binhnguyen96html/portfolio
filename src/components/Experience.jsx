@@ -9,9 +9,9 @@ const Experience = ({ expList }) => {
         expList.map((expItem, idx) => (
           <div
             key={idx}
-            className="md:grid grid-cols-5 px-12 py-6 rounded-xl shadow-xl
+            className="md:grid grid-cols-5 p-12 gap-2 rounded-xl shadow-xl
       hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 delay-75 group 
-      md:bg-teal-900 md:mx-12 3xl:px-20
+      md:bg-teal-900 md:mx-12 3xl:px-20 
       dark:bg-teal-700 dark:text-white"
           >
             <div className="col-span-2 opacity-70 flex flex-col gap-2 text-base
@@ -34,7 +34,7 @@ const Experience = ({ expList }) => {
             </div>
 
             <div
-              className="col-span-3 ml-0 mt-6 lg:mt-0"
+              className="col-span-3 ml-0 mt-6 md:mt-0"
             >
               <p className="text-xl font-bold 3xl:text-2xl">{expItem.jobTitle}</p>
 
