@@ -4,13 +4,13 @@ import { ResumeCircle } from './ResumeCircle';
 
 const ProjectsBig = ({ projects }) => {
   return (
-    <div>
+    <div className='lg:grid lg:grid-cols-2'>
       {projects.map((pro, idx) => (
         <div
           key={idx}
-          className="md:grid grid-cols-4 mx-12 mb-16 py-10 rounded-xl px-6 shadow-xl
+          className="md:grid md:grid-cols-4 mx-12 mb-16 py-10 rounded-xl px-6 shadow-xl
       hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 group
-      3xl:mx-32 3xl:mt-32"
+      3xl:mx-32 3xl:mt-32 lg:col-span-1 "
         >
           {/* Resume Circle  */}
           <ResumeCircle />

@@ -287,7 +287,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      {window.innerWidth < 1200 && <Footer />}
+      {window.innerWidth < 1024 && <Footer />}
     </div>
   );
 };
