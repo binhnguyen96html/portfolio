@@ -13,7 +13,7 @@ export const ResumeCircle = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
+          href="https://drive.google.com/file/d/1idQWZFB2EK1gkuj5vAsOEeutvEZ2ygNt/view?usp=sharing"
         >
           {window.innerWidth < 640 ? 'CV' : 'Resume'}
         </a>

@@ -61,7 +61,7 @@ const ProjectsPage = () => {
             </div>
             <div className="hover:text-teal-100 hover:scale-105">
               <a
-                href="https://drive.google.com/file/d/17vVzVLmr59X27YuNf8W9vBxh8s7PdQLS/view?usp=sharing"
+                href="https://drive.google.com/file/d/1idQWZFB2EK1gkuj5vAsOEeutvEZ2ygNt/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
