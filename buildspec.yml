@@ -2,13 +2,11 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 21.4.0  # Use the appropriate version for your project
-  build:
     commands:
       - npm install
-      - npm run build  # Or whatever command builds your project
-
+  build:
+    commands:
+      - npm run build
 artifacts:
   files:
     - '**/*'
