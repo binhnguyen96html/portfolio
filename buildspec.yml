@@ -2,12 +2,20 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 21.4.0
     commands:
-      - npm install
+      - echo "Installing dependencies using node 21.4.0"
+      - npm ci 
+      - echo "Done installing dependencies ====>"
   build:
     commands:
+      - echo "Building the React Project"
       - npm run build
+      - echo "Done building the project ==> Exporting artifcats"
+
 artifacts:
   files:
     - '**/*'
-  base-directory: 'build'  # Or wherever your build files are output
+  discard-paths: no
+  base-directory: build
