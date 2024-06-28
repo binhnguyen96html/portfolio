@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 21.4.0  # Use the appropriate version for your project
+  build:
+    commands:
+      - npm install
+      - npm run build  # Or whatever command builds your project
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'build'  # Or wherever your build files are output
