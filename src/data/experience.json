@@ -1,5 +1,27 @@
 [
   {
+    "period": "Jun 2024 - July 2024",
+    "location": "San Jose, CA",
+    "company": "California Seismic",
+    "description": 
+    "California Seismic is the first free comprehensive resource for passing the California Seismic Principles Exam. We are enabling all prospective civil engineers and students to learn the fundamentals of seismic/structural engineering online and at their own pace.",
+    "jobTitle": "Frontend Developer Intern",
+    "responsibilities": [
+      "Implemented a React-based exam simulator with static routing for multiple modules, featuring an interactive multiple-choice interface that optimized user experience through instant navigation and minimal page reloads",
+      "Integrated Tailwind CSS for efficient, inline styling of semantic HTML to streamline web development and create an attractive, modern interface with minimal code overhead compared to traditional CSS approaches",
+      "Leveraged AWS cloud infrastructure to create a scalable, secure, and cost-effective static website deployment solution, significantly reducing operational overhead and improving development efficiency compared to traditional on-premises hosting",
+      "Applied Jest for React component unit testing, ensuring accurate visualizations and preempting errors, maintaining a robust, high-quality codebase that supports efficient continuous integration",
+      "Employed Chart.js to create interactive visualizations of exam results with its built-in features to transform complex data into easily digestible charts, enhancing the user’s understanding and engagement"
+      ],
+    "link": "https://californiaseismic.com/",
+    "skills": [
+      "React",
+      "Tailwind CSS",
+      "AWS",
+      "Jest"
+    ]
+  },
+  {
     "period": "Jan 2024 - May 2024",
     "location": "New York, USA",
     "company": "SvelteScope - Open-Source Chrome Extension Debugging Tool",

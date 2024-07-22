@@ -1,16 +1,14 @@
 [
   {
     "period": "2024",
-    "description": "Upcomming Project: Cook Your Favorite - Web Application for providing Recipe and Ingredients",
-    "link": "https://www.figma.com/design/3BznRKdOOXtepBC0RMCuCL/Cook_Your_Favorite?m=dev&node-id=0-1&t=vifPO6XhiRw9kXqS-1",
+    "description": "Cook Your Favorite - Web Application for providing Recipe and Ingredients",
+    "link": "https://binhnguyenprojects.com/",
     "img": "img/cooking.png",
     "skills": [
       "React",
-      "Redux",
       "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB"
+      "Django",
+      "AWS"
     ]
   },
   {

@@ -10,24 +10,12 @@ const AboutMe = () => {
       3xl:text-xl 3xl:leading-[60px] "
     >
       <p>
-        At SvelteScope, our team is harnessing
-        <span className="font-bold"> JavaScript </span>
-        to redefine Chrome extension debugging for Svelte applications. With a
-        <span className="font-bold">
-          {' '}
-          Master's degree in Project Management{' '}
-        </span>
-        from Northeastern and an
-        <span className="font-bold"> Associate's in Computer Science </span>, my
-        focus on creating readable, maintainable code has improved developer
-        productivity and the end-user experience.
-      </p>
-      <p className="mt-6">
-        Bringing technical acumen with strategic project management, we've
-        optimized web app performance and facilitated a seamless development
-        workflow. My role centers on empowering developers with expressive tools
-        while contributing to impactful open-source software, driven by a
-        commitment to technological excellence and innovation.
+        California Seismic's Frontend Developer team benefits from my expertise
+        in JavaScript and React.js, where we deliver premium web experiences. My
+        academic foundation in <span className='font-semibold'>Project Management</span> from Northeastern University
+        and <span className='font-semibold'>Computer Science</span> from Mission College strongly complements my
+        technical role, ensuring that every project is approached with a
+        strategic lens for maximum efficiency and impact.
       </p>
     </div>
   );

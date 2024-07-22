@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiLink } from 'react-icons/fi';
-import { PiReadCvLogoThin } from "react-icons/pi";
+import { PiReadCvLogoThin } from 'react-icons/pi';
 
 const Experience = ({ expList }) => {
   return (
@@ -9,51 +9,61 @@ const Experience = ({ expList }) => {
         expList.map((expItem, idx) => (
           <div
             key={idx}
-            className="md:grid grid-cols-5 p-12 gap-2 rounded-xl shadow-xl
+            className="md:grid grid-cols-5 p-12 gap-2 mb-3 rounded-xl shadow-xl
       hover:bg-teal-900 hover:bg-opacity-50 transition-all duration-300 delay-75 group 
       md:bg-teal-900 md:mx-12 3xl:px-20 
       dark:bg-teal-700 dark:text-white"
           >
-            <div className="col-span-2 opacity-70 flex flex-col gap-2 text-base
-            3xl:text-xl">
+            <div
+              className="col-span-2 opacity-70 flex flex-col gap-2 text-base
+            3xl:text-xl"
+            >
               <p>{expItem.period}</p>
               <p>{expItem.location}</p>
 
-              <div className="hover:text-teal-100 hover:translate-x-1  text-sm">
-              <a
-                href={expItem.social_media}
-                target="_blank"
-                rel="noreferrer"
-                className='flex gap-2'
-              >
-                MEDIA
-              <PiReadCvLogoThin className='mt-[3px]'/>
-              </a>
+              {expItem.social_media && (
+                <div className="hover:text-teal-100 hover:translate-x-1  text-sm">
+                  <a
+                    href={expItem.social_media}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex gap-2"
+                  >
+                    MEDIA
+                    <PiReadCvLogoThin className="mt-[3px]" />
+                  </a>
+                </div>
+              )}
             </div>
 
-            </div>
-
-            <div
-              className="col-span-3 ml-0 mt-6 md:mt-0"
-            >
-              <p className="text-xl font-bold 3xl:text-2xl">{expItem.jobTitle}</p>
+            <div className="col-span-3 ml-0 mt-6 md:mt-0">
+              <p className="text-xl font-bold 3xl:text-2xl">
+                {expItem.jobTitle}
+              </p>
 
               <p
                 className="relative mt-2 text-teal-400
               group-hover:text-cyan-200 duration-300
                md:text-xl"
               >
-                <a href={expItem.link} target='_blank' rel='noreferrer' > {expItem.company}</a>
+                <a href={expItem.link} target="_blank" rel="noreferrer">
+                  {' '}
+                  {expItem.company}
+                </a>
                 <a
                   className="absolute ml-2 mt-1
                 duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:font-bold"
-                  href={expItem.link} target='_blank' rel='noreferrer'
+                  href={expItem.link}
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <FiLink className="icon text-base mt-1" />
                 </a>
               </p>
 
-              <p className="mt-2 font-thin text-sm 3xl:text-md ">{expItem.description}</p>
+              <p className="mt-2 font-thin text-sm 3xl:text-md ">
+                {expItem.description}
+              </p>
 
               <div className="overflow-hidden flex flex-wrap mt-4 ">
                 {expItem.skills.map((s, i) => (
